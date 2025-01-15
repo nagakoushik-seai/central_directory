@@ -205,7 +205,7 @@ def linking_config(pname ,rtlrelease,block_name,default_flow,workarea,stage_in_a
 
 
 def main():
-	central_directory_path = "/nas/nas_v1/Innovus_trials/users/udaykiran/trails"
+	central_directory_path = "./"
 	# Parameters for central_directory
 	name = "central_scripts"
 	project = ['project']
