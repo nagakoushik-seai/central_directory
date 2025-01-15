@@ -125,12 +125,12 @@ def copy_files(central_directory_path,name,project,blocks,sub_plug,stages,pname 
 							[shutil.copy2(os.path.join(src, f), os.path.join(dst, f)) for src, dst in [(f"{central_directory_path}/{name}/{project[0]}/{blocks[0]}/lec/customscripts/", f"{pname}/{rtlrelease[0]}/{block_name}/LEC/{workarea}/{runname}/customscripts/")] for f in os.listdir(src) if not os.path.exists(os.path.join(dst, f))]
 						except Exception as e:pass				
 				
-				if (i == "STA"):
-					try:
-						[shutil.copy2(os.path.join(src, f), os.path.join(dst, f)) for src, dst in [(f"{central_directory_path}/{name}/{project[0]}/{blocks[0]}/tempus/inputs/", f"{pname}/{rtlrelease[0]}/{block_name}/STA/{workarea}/{runname}/inputs/")] for f in os.listdir(src) if not os.path.exists(os.path.join(dst, f))]
-						[shutil.copy2(os.path.join(src, f), os.path.join(dst, f)) for src, dst in [(f"{central_directory_path}/{name}/{project[0]}/{blocks[0]}/tempus/scripts/", f"{pname}/{rtlrelease[0]}/{block_name}/STA/{workarea}/{runname}/scripts/{j}/")] for f in os.listdir(src) if not os.path.exists(os.path.join(dst, f))]
-						[shutil.copy2(os.path.join(src, f), os.path.join(dst, f)) for src, dst in [(f"{central_directory_path}/{name}/{project[0]}/{blocks[0]}/tempus/customscripts/", f"{pname}/{rtlrelease[0]}/{block_name}/STA/{workarea}/{runname}/customscripts/")] for f in os.listdir(src) if not os.path.exists(os.path.join(dst, f))]
-					except Exception as e:print(f" error copy_file stage  STA {e}")
+				#if (i == "STA"):
+					#try:
+						#[shutil.copy2(os.path.join(src, f), os.path.join(dst, f)) for src, dst in [(f"{central_directory_path}/{name}/{project[0]}/{blocks[0]}/tempus/inputs/", f"{pname}/{rtlrelease[0]}/{block_name}/STA/{workarea}/{runname}/inputs/")] for f in os.listdir(src) if not os.path.exists(os.path.join(dst, f))]
+						#[shutil.copy2(os.path.join(src, f), os.path.join(dst, f)) for src, dst in [(f"{central_directory_path}/{name}/{project[0]}/{blocks[0]}/tempus/scripts/", f"{pname}/{rtlrelease[0]}/{block_name}/STA/{workarea}/{runname}/scripts/{j}/")] for f in os.listdir(src) if not os.path.exists(os.path.join(dst, f))]
+						#[shutil.copy2(os.path.join(src, f), os.path.join(dst, f)) for src, dst in [(f"{central_directory_path}/{name}/{project[0]}/{blocks[0]}/tempus/customscripts/", f"{pname}/{rtlrelease[0]}/{block_name}/STA/{workarea}/{runname}/customscripts/")] for f in os.listdir(src) if not os.path.exists(os.path.join(dst, f))]
+					#except Exception as e:print(f" error copy_file stage  STA {e}")
 
 				if (i == "config"):
 					try:
@@ -205,7 +205,7 @@ def linking_config(pname ,rtlrelease,block_name,default_flow,workarea,stage_in_a
 
 
 def main():
-	central_directory_path = "./"
+	central_directory_path = "."
 	# Parameters for central_directory
 	name = "central_scripts"
 	project = ['project']
