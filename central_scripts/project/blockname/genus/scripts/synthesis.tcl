@@ -53,7 +53,7 @@ source $work_dir/../../customscripts/genus_individual.tcl
 stage_individual generic
 
 ## to merge multibit cells if present in the design
-if { [llength [get_db insts -if {.lib_cells.bit_width > 1} ]] > 0 } {  merge_to_multibit_cells -logical $design  }
+#if { [llength [get_db insts -if {.lib_cells.bit_width > 1} ]] > 0 } {  merge_to_multibit_cells -logical $design  }
 
 ## mapping stage
 syn_map
