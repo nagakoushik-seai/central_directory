@@ -76,7 +76,7 @@ report_power > $report_dir/$current_step.report_power.rpt
 report_area -out_file $report_dir/$current_step.report_power.rpt
 
 
-rm -rf hold.rpt  instt setup.rpt
+
 ###*** to generate csv 
 source ../../customscripts/generate_csv.tcl
 
